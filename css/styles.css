@@ -13,7 +13,8 @@ body{
     --background-hero:#2F303A;
     --background: #F5F4FA;
     --border: #EEEEEE;
-    --brand-black: #212121; 
+    --brand-black: #212121;
+    --icons: #AFB1B8;
 }
 
 .container {
@@ -58,6 +59,8 @@ p{
 
 img{
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .visually-hidden {
@@ -153,7 +156,9 @@ Header
 .tel-footer:hover,
 .tel-footer:focus,
 .contacts:hover,
-.contacts:focus {
+.contacts:focus,
+.adress:hover,
+.adress:focus {
     color: var(--brand-color);
 }
 
@@ -196,6 +201,11 @@ footer {
 .hero{
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .container-hero {
@@ -359,10 +369,13 @@ Footer
 
 .container-footer {
     display: flex;
-    padding-top: 60px;
-    padding-bottom: 60px;
     align-items: baseline;
     gap: 70px;
+}
+
+.footer{
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .logo-footer {
@@ -389,9 +402,12 @@ Footer
 .container-footer .logo {
     display: flex;
     margin-bottom: 20px;
+    margin-right: 0;
 }
 
-
+.footer-adress {
+    min-width: 231px;
+}
 
 /*
 =============================================================================
@@ -416,7 +432,7 @@ Portfolio page
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
-    color: #212121;
+    color: var(--brand-black);
     background: var(--background);
     border: none;
     border-radius: 4px;
@@ -427,27 +443,33 @@ Portfolio page
 .portfolio-btn:focus {
     color: var(--white);
     background-color: var(--brand-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-nav li:not(:last-child) {
     margin-right: 8px;
 }
 
-.container-portfolio-list {
+.portfolio-card-list {
     display: flex;
     flex-wrap: wrap;
 }
 
-.container-portfolio-list li {
+.portfolio-card-item {
     margin-right: 30px;
     margin-bottom: 30px;
 }
 
-.container-portfolio-list li:nth-child(3n+3) {
+.portfolio-card-item:hover,
+.portfolio-card-item:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-card-item:nth-child(3n+3) {
     margin-right: 0px;
 }
 
-.container-portfolio-list li:nth-last-child(-n + 3) {
+.portfolio-card-list li:nth-last-child(-n + 3) {
     margin-bottom: 0px;
 }
 
@@ -461,6 +483,8 @@ Portfolio page
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+
+    margin-bottom: 4px;
 
     color: var(--brand-black);
 }
@@ -513,34 +537,30 @@ Icons
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: #FFFFFF;
-    fill: #AFB1B8;
+    background-color: var(--white);
+    fill: var(--icons);
 }
 
 .social-link:hover, .social-link:focus{
-    background-color: #2196F3;
-    fill: #FFFFFF;
-}
-
-.soclinks-item{
-
+    background-color: var(--brand-color);
+    fill: var(--white);
 }
 
 .clients-link{
-    border: 1px solid #AFB1B8;
+    border: 1px solid var(--icons);
     border-radius: 4px;
     height: 92px;
     width: 170px;
     display: flex;
     justify-content: center;
     align-items: center;
-    fill: #AFB1B8;
+    fill: var(--icons);
 }
 
 .clients-link:hover,
 .clients-link:focus {
-    fill: #2196F3;
-    border: 1px solid #2196F3;
+    fill: var(--brand-color);
+    border: 1px solid var(--brand-color);
 }
 
 .clients-list{
@@ -561,7 +581,7 @@ Icons
     text-transform: uppercase;
     font-style: normal;
     
-    color: #FFFFFF;
+    color: var(--white);
 
     margin-bottom: 20px;
 }
@@ -581,11 +601,11 @@ Icons
     height: 44px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
-    fill: #FFFFFF;
+    fill: var(--white);
 }
 
 .links-footer:hover, .links-footer:focus{
-    background-color: #2196F3
+    background-color: var(--brand-color);
 }
 
 .block-footer{
