@@ -206,6 +206,10 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    max-width: 1600px;
+    height: 600px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .container-hero {
@@ -460,8 +464,12 @@ Portfolio page
     margin-bottom: 30px;
 }
 
-.portfolio-card-item:hover,
-.portfolio-card-item:focus{
+.portfolio-link{
+    display: block;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -530,12 +538,17 @@ Icons
     gap: 10px;
 }
 
+.soclinks-item{
+    width: 44px;
+    height: 44px;
+}
+
 .social-link{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background-color: var(--white);
     fill: var(--icons);
@@ -546,11 +559,16 @@ Icons
     fill: var(--white);
 }
 
+.clients-item{
+    height: 92px;
+    width: 170px;
+}
+
 .clients-link{
     border: 1px solid var(--icons);
     border-radius: 4px;
-    height: 92px;
-    width: 170px;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -593,12 +611,17 @@ Icons
     gap: 10px;
 }
 
+.links-footer-item{
+    width: 44px;
+    height: 44px;
+}
+
 .links-footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     fill: var(--white);
